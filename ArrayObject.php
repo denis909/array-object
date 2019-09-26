@@ -1,8 +1,7 @@
 <?php
 /**
  * @package Array Object
- * @license MIT License
- * @link    http://denis909.spb.ru
+ * @license MIT
  */
 namespace denis909\ArrayObject;
 
