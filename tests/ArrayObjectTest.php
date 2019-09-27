@@ -2,8 +2,9 @@
 /**
  * @package Array Object
  * @license MIT
+ * @author denis909
  */
- use denis909\ArrayObject\ArrayObject;
+use denis909\ArrayObject\ArrayObject;
 
 class ArrayObjectTest extends \PHPUnit\Framework\TestCase
 {
