@@ -2,8 +2,8 @@
     "name": "denis909/array-object",
     "license": "MIT",
 	"autoload": {
-		"psr-4": [
+		"psr-4": {
 			"denis909\\ArrayObject\\" : ""
-		]
+		}
 	}
 }
