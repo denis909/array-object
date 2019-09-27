@@ -66,4 +66,26 @@ class ArrayObjectTest extends \PHPUnit\Framework\TestCase
         $object['param0'];
     }
 
+    public function testUnsetArray()
+    {
+        $object = $this->_createArrayObject();
+
+        unset($object['param1']);
+
+        $this->expectException(Exception::class);
+
+        $temp = $object['param1'];
+    }
+
+    public function testUnsetObject()
+    {
+        $object = $this->_createArrayObject();
+
+        unset($object->param1);
+
+        $this->expectException(Exception::class);
+
+        $temp = $object->param1;
+    }
+
 }
