@@ -12,11 +12,21 @@ use Exception;
 class ArrayObject implements ArrayAccess
 {
 
+    protected $_undefinedOffsetError = 'Undefined offset: {class}::${offset}';
+
     protected $_data = [];
 
     public function __construct(array $params = [])
     {
         $this->_data = $params;
+    }
+
+    protected function getUndefinedOffsetError($offset)
+    {
+        return strtr($this->_undefinedOffsetError, [
+            '{offset}' => $offset,
+            '{class}' => get_called_class()
+        ]);
     }
 
     public function __isset($offset)
@@ -33,7 +43,7 @@ class ArrayObject implements ArrayAccess
     {
         if (!array_key_exists($offset, $this->_data))
         {
-            throw new Exception('Undefined property: ' . get_called_class() . '::$' . $offset);
+            throw new Exception($this->getUndefinedOffsetError($offset));
         }
 
         return $this->_data[$offset];
@@ -43,7 +53,7 @@ class ArrayObject implements ArrayAccess
     {
         if (!array_key_exists($offset, $this->_data))
         {
-            throw new Exception('Undefined property: ' . get_called_class() . '::$' . $offset);
+            throw new Exception($this->getUndefinedOffsetError($offset));
         }
 
         $this->_data[$offset] = $value;
@@ -68,7 +78,7 @@ class ArrayObject implements ArrayAccess
     {
         if (!array_key_exists($offset, $this->_data))
         {
-            throw new Exception('Undefined offset: ' . $offset);
+            throw new Exception($this->getUndefinedOffsetError($offset));
         }
 
         $this->_data[$offset] = $value;
@@ -83,7 +93,7 @@ class ArrayObject implements ArrayAccess
     {
         if (!array_key_exists($offset, $this->_data))
         {
-            throw new Exception('Undefined offset: ' . $offset);
+            throw new Exception($this->getUndefinedOffsetError($offset));
         }
 
         unset($this->_data[$offset]);
@@ -93,7 +103,7 @@ class ArrayObject implements ArrayAccess
     {
         if (!array_key_exists($offset, $this->_data))
         {
-            throw new Exception('Undefined offset: ' . $offset);
+            throw new Exception($this->getUndefinedOffsetError($offset));
         }
 
         return $this->_data[$offset];
