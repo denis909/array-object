@@ -1,6 +1,6 @@
 # Array Object
 
-The ArrayAccess interface implementation.
+PHP ArrayAccess interface implementation.
 
 ## Installation
 
