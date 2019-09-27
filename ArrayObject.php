@@ -12,7 +12,7 @@ use Exception;
 class ArrayObject implements ArrayAccess
 {
 
-    protected $_undefinedOffsetError = 'Undefined offset: {class}::${offset}';
+    protected $_undefinedOffsetError = 'Undefined property: {class}::${offset}';
 
     protected $_data = [];
 
