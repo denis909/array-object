@@ -4,7 +4,7 @@ PHP ArrayAccess interface implementation.
 
 ## Installation
 
-`composer require denis909/array-object:dev-master`
+`composer require denis909/php-array-object:dev-master`
 
 ## Using
 
@@ -22,8 +22,8 @@ echo $obj->param1;
 
 #### Windows
 
-vendor\bin\phpunit.bat vendor\denis909\array-object\tests
+vendor\bin\phpunit.bat vendor\denis909\php-array-object\tests
 
 #### Linux
 
-./vendor/bin/phpunit vendor/denis909/array-object/tests
+./vendor/bin/phpunit vendor/denis909/php-array-object/tests

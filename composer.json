@@ -1,9 +1,9 @@
 {
-    "name": "denis909/array-object",
+    "name": "denis909/php-array-object",
     "license": "MIT",
-	"autoload": {
-		"psr-4": {
-			"denis909\\ArrayObject\\" : ""
-		}
-	}
+    "autoload": {
+        "psr-4": {
+            "denis909\\ArrayObject\\" : ""
+        }
+    }
 }
