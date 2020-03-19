@@ -4,7 +4,7 @@
  * @license MIT
  * @author denis909
  */
-namespace denis909\ArrayObject;
+namespace Denis909\ArrayObject;
 
 use ArrayAccess;
 use Exception;

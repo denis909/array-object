@@ -4,7 +4,7 @@
  * @license MIT
  * @author denis909
  */
-use denis909\ArrayObject\ArrayObject;
+use Denis909\ArrayObject\ArrayObject;
 
 class ArrayObjectTest extends \PHPUnit\Framework\TestCase
 {
