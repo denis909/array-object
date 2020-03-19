@@ -89,4 +89,15 @@ class ArrayObjectTest extends \PHPUnit\Framework\TestCase
         $temp = $object->param1;
     }
 
+    public function testToArray()
+    {
+        $obj = $this->_createArrayObject();
+
+        $arr = (array) $obj;
+
+        $this->assertArrayHasKey('param1', $arr);
+
+        $this->assertArrayHasKey('param2', $arr);
+    }
+
 }
